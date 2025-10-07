@@ -1,0 +1,48 @@
+https://www.prisma.io/docs/guides/nextjs
+starts docker db: docker run --rm -p 5432:5432 -e POSTGRES_HOST_AUTH_METHOD=trust postgres
+
+prisma setup:
+npm install -D prisma
+npm install @prisma/client
+npx prisma init
+
+update this in .env to match:
+DATABASE_URL="postgresql://postgres@localhost:5432/postgres?schema=public"
+
+Add models to prisma config.ts
+
+creates client with first changes (allows rollback too): npx prisma migrate dev --name init
+regenerate client with latest changes: npx prisma generate
+
+generate the types before building (avoids future headaches when deploying)
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "prisma generate && next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+
+to make ts work:
+	npm i tsx --save-dev
+	create prisma.config.ts
+
+	create seed.ts
+	run seed.ts: npx prisma db seed
+
+
+import { defineConfig } from "prisma/config";
+
+export default defineConfig({
+  schema: "./prisma/schema.prisma",
+  migrations: {
+    path: "./prisma/migrations",
+    seed: "tsx ./prisma/seed.ts",
+  },
+});
+
+see db and schemas: npx prisma studio
+
+
+creating single instance of PrismaClient:
+create prisma.ts then run: "npm install @prisma/extension-accelerate"
+npx prisma generate

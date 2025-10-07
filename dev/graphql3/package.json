@@ -1,0 +1,33 @@
+{
+  "name": "graphql-swagger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^6.16.3",
+    "tsx": "^4.20.6"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.3",
+    "@prisma/extension-accelerate": "^2.0.2"
+  }
+}

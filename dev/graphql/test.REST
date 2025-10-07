@@ -1,0 +1,50 @@
+### Create a new user
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation { createUser(email: \"bob2@gmail.com\", password: \"secret\") { success message user { id email } } }"
+}
+
+### Login user (returns Set-Cookie with JWT)
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation { loginUser(email: \"bob2@gmail.com\", password: \"secret\") { success message token user { id email } } }"
+}
+
+### Get the logged-in user (requires Cookie header)
+# Copy the "Set-Cookie" value from the login response into the Cookie header
+POST http://localhost:4000/graphql
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTc1OTEwOTA0OCwiZXhwIjoxNzU5MTEyNjQ4fQ.a9Xz9flJH_67rcxGVmohxbbDWxol-IBUHU3cFGJe2uo
+
+{
+  "query": "query { me { id email posts { id title } } }"
+}
+
+### Create a post (requires Cookie header from login)
+POST http://localhost:4000/graphql
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTc1OTEwOTA0OCwiZXhwIjoxNzU5MTEyNjQ4fQ.a9Xz9flJH_67rcxGVmohxbbDWxol-IBUHU3cFGJe2uo
+
+{
+  "query": "mutation { createPost(title: \"My first post\") { success post { id title author { email } } } }"
+}
+
+### Get all users with posts
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+  "query": "query { getUsers { id email posts { id title } } }"
+}
+
+### Get all posts with authors
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+  "query": "query { getPosts { id title author { id email } } }"
+}

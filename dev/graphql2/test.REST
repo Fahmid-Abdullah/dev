@@ -1,0 +1,33 @@
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+    "query": "query { getUser(email: \"bob@gmail.com\") { firstName, lastName } }"
+}
+
+###
+
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+    "query": "mutation { createUser(firstName: \"Bob\", lastName: \"Bobblehead\",  email: \"bob2@gmail.com\", password: \"password\") { success message user { firstName lastName email password } } }"
+}
+
+###
+
+POST http://localhost:4000/graphql
+Content-Type: application/json
+
+{
+    "query": "mutation { loginUser(email: \"bob2@gmail.com\", password: \"password\") { success message user { firstName lastName email password } token } }"
+}
+
+###
+POST http://localhost:4000/graphql
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTc1OTI3NTE2MiwiZXhwIjoxNzU5Mjc4NzYyfQ.89ENkdCfw_qhtK8VBS0QpnRvVerMp4784NEPiTJC6tU
+
+{
+    "query": "query { me { id email firstName lastName } }"
+}
