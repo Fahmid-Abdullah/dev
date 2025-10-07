@@ -1,0 +1,33 @@
+npx create-react-app . 
+npm install leaflet react-leaflet react-leaflet-cluster
+
+Leaflet Tile Providers:
+1. OpenStreetMap (OSM)
+   - URL: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+   - Attribution: &copy; OpenStreetMap contributors
+   - Best Use: General-purpose maps; suitable for most applications.
+   - Notes: Default and widely recognized; ideal for a clean, neutral map base.
+
+2. CartoDB Positron
+   - URL: https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png
+   - Attribution: &copy; OpenStreetMap contributors &copy; CartoDB
+   - Best Use: Dashboards, data visualization, and applications requiring a minimalist map style.
+   - Notes: Light-colored tiles enhance data overlays' visibility.
+
+3. Stamen Toner
+   - URL: https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png
+   - Attribution: Map tiles by Stamen Design, &copy; OpenStreetMap contributors
+   - Best Use: High-contrast maps for print, presentations, or thematic mapping.
+   - Notes: Black-and-white design with bold lines; excellent for emphasizing data.
+
+4. Esri World Imagery
+   - URL: https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
+   - Attribution: &copy; Esri, Maxar, Earthstar Geographics, and the GIS User Community
+   - Best Use: Satellite imagery for real-world context, planning, or environmental analysis.
+   - Notes: High-resolution aerial imagery; suitable for detailed spatial analysis.
+
+5. OpenTopoMap
+   - URL: https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png
+   - Attribution: &copy; OpenStreetMap contributors &copy; OpenTopoMap
+   - Best Use: Hiking, outdoor activities, and topographic mapping.
+   - Notes: Topographic map style with elevation contours; great for terrain analysis.
