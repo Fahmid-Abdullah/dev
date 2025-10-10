@@ -1,0 +1,31 @@
+# Ignore specific GeoData files and folders
+4470-GeoData/GDEM-10km-colorized.tif
+4470-GeoData/NE1_HR_LC/
+4470-GeoData/Park and Recreation Facility Projects - 4326.geojson
+4470-GeoData/Park and Recreation Facility Study Areas - 4326.geojson
+4470-GeoData/Parks Drinking Fountains - 4326.geojson
+4470-GeoData/Parks and Recreation Facilities - 4326.geojson
+4470-GeoData/TTC Streetcar Delay Data since 2025.csv
+4470-GeoData/Toronto Geospatial info with Riding Information - Sheet1.csv
+4470-GeoData/Washroom Facilities - 4326.geojson
+4470-GeoData/project1/
+
+# Ignore other large folders
+4474B/
+PycharmProjects/
+kotlin/
+machine-learning/
+my-portfolio/
+mysql/
+next-overview/
+next-projects/
+node-express-overview/
+node-projects/
+other/
+portbet/
+react projects/
+react-example/
+react-overview/
+supabase-proj/
+tte/
+wcs/
