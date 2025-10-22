@@ -1,0 +1,43 @@
+# Node modules
+node_modules/
+
+# GeoTIFF files
+GDEM-10km-colorized.tif
+
+# Directories
+NE1_HR_LC/
+leaflet-3/
+leaflet-4/
+project1/
+
+# GeoJSON files
+Park and Recreation Facility Projects - 4326.geojson
+Park and Recreation Facility Study Areas - 4326.geojson
+Parks Drinking Fountains - 4326.geojson
+Parks and Recreation Facilities - 4326.geojson
+Washroom Facilities - 4326.geojson
+
+# CSV files
+TTC Streetcar Delay Data since 2025.csv
+Toronto Geospatial info with Riding Information - Sheet1.csv
+
+# Parent directories (relative paths)
+../4474B/
+../PycharmProjects/
+../dev/dockerize2/
+../kotlin/
+../my-portfolio/
+../mysql/
+../next-overview/
+../next-projects/
+../nextJS_nextsteps.txt
+../node-express-overview/
+../node-projects/
+../other/
+../portbet/
+../react projects/
+../react-example/
+../react-overview/
+../supabase-proj/
+../tte/
+../wcs/
